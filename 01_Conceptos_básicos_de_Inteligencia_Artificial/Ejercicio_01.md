@@ -15,5 +15,3 @@ Nombre: Chat GPT
 Uso: Antes de utilizar Gemini, como IA principal, utilizaba Chat GPT, en su versión gratuita. Para exactamente lo mismo que uso a Gemini, es decir para ayuda general, desde código, reportes, y
 tareas para la Universidad, hasta dudas personales.
 
-Nombre: 
-Uso:
