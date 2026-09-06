@@ -1,0 +1,55 @@
+### 1. Asistente virtual de voz
+
+- **Performance:** Cumplir con las peticiones del usuario correctamente
+- **Environment:** En este caso, un asistente de voz puede estar dentro de cualquier aparato electrónico, comúnmente integrado dentro de teléfonos celulares, o dispositivos específicos como bocinas tipo Alexa. Entonces, el entorno pudiese ser cualquier sitio con conexión a internet. Pudiendo estar en exteriores o interiores, el entorno entonces es de tipo parcialmente observable, contando con sensores, por lo regular, de temperatura, de movimiento, de luz, ultrasónicos (presencia), y micrófonos. Los asistentes de voz estan sujetdos siempre a un entorno donde pueden suceder miles de cosas, como ruido exterior, o perdida de conexión lo que entonces significa que es de tipo estocástico, ya que depende de otros factores impredecibles para su correcto funcionamiento. También diría que es de tipo secuencial ya que estos guardan información de conversaciones anteriores, aunque también pueden funcionar de manera aislada, siendo episódicos, dependiendo de la conversación. También considero que se ejecuta en un entorno dinámico ya que el usuario puede seguir hablando, interrumpir la respuesta con otro comando. Por último, el agente puede ejecutar y percibir acciones tanto continuas como discretas.  
+- **Actuators:** El asistente virtual puede realizar diferentes acciones, como realizar llamadas, apagar/encender luces o aparatos electrónicos dentro su misma red, setear alarmas, anotar recordatorios, investigar información, reproducir música, etc.
+- **Sensors:** Como mencioné en el apartado de entorno, los asistentes dependen de que sensores integren el aparato (celular, computador, o tipo bocina), por lo general, al menos incluyen micrófono, sensores de temperatura, sensores de luz, sensores ultrasónicos (de presencia), giroscopios, entre otros. 
+
+### 2. Robot aspirador doméstico
+
+- **Performance:** Mantener limpia el area de la forma más eficiente posible, para mantener el equipo en buenas condiciones para un tiempo de vida útil mayor y ahorrar energía.
+- **Environment:** El entorno es el interior de un departamento o casa, con muebles, mascotas y personas. Al igual que el asistente, es un entorno de tipo parcialmente observable ya que el robot no puede ver debajo de los muebles hasta que está ahí, y sus sensores tienen un rango limitado o puede haber habitaciones cerradas. Es estocástico porque los obstáculos pueden moverse (como una mascota cruzando) o puede aparecer suciedad nueva al azar, por lo que el resultado de intentar avanzar no siempre está garantizado si alguien se cruza. Es secuencial porque moverse hacia una habitación ahora determina qué podrá limpiar en el futuro. También es dinámico porque el entorno cambia mientras el robot limpia (personas caminando). Se considera un entorno con estado continuo (movimiento fluido por el espacio de la casa), aunque a veces el agente lo procese de forma discreta mapeando cuadrículas.
+- **Actuators:** Motores para el movimiento, succión y uso de cerdas.
+- **Sensors:** Sensores opticos, tipo laser como LIDAR para mapeo, y luz he visto que usan luz para detectar polvo y suciedad, sensores de parachoques para moverse en caso de chocar contra algún objeto.
+
+### 3. Sistema de recomendación de streaming
+
+- **Performance:** Maximizar el tiempo en pantalla/segundo plano de la plataforma, mejorar la satisfacción del usuario en cuanto al contenido por ofrecer.
+- **Environment:** Este es un entorno puramente virtual, es decir, la interfaz de la aplicación, el catálogo de contenido y la base de datos de usuarios. Es parcialmente observable porque el sistema solo ve las interacciones digitales del usuario, pero no conoce su estado de ánimo real ni si alguien más está usando su perfil en ese momento. Es altamente estocástico debido a que el comportamiento humano y sus gustos son volubles e impredecibles. Definitivamente es secuencial, ya que una serie de clics a lo largo de los días moldean el perfil de gustos y afectan directamente todas las recomendaciones futuras. Es dinámico porque el catálogo cambia, las tendencias se actualizan y el usuario puede cambiar de pantalla en cualquier segundo. Por último, opera en un espacio discreto, ya que se elige entre un catálogo con opciones finitas.
+- **Actuators:** Contenido dentro de la página de inicio y los algoritmos de software que reordenan las listas de reproducción.
+- **Sensors:** Entradas del usuario, como clics en contenido, tiempo de reproducción, historial de reproducción y búsqueda, valoración de contenido.
+
+### 4. Vehículo autónomo en ciudad
+- **Performance:** Navegación segura, confiable, cómoda, efieciente, y minimizar el riesto de accidentes.
+- **Environment:** Las calles de la ciudad, que incluyen tráfico, peatones, clima, señales de tránsito y pasajeros. Es un entorno parcialmente observable porque los sensores no pueden ver qué hay delante de un camión grande, y no se conocen las intenciones de los otros conductores. Es fuertemente estocástico porque el comportamiento de peatones y otros autos es impredecible, o las llantas podrían derrapar por lluvia. Es secuencial, ya que frenar o girar mal ahora afecta toda la ruta y seguridad a futuro. Es completamente dinámico, porque los demás autos siguen moviéndose constantemente mientras el algoritmo procesa qué hacer. Es un entorno continuo, tanto en el flujo temporal como en los rangos de velocidad y ángulos de giro del volante. Además, es un entorno multiagente (parcialmente cooperativo para evitar choques, y competitivo por el espacio).
+- **Actuators:** Volante, frenos, acelerador, luces, claxón, pantalla y voz interactiva con el usuario,
+- **Sensors:** Los vehículos autónomos, utilizan un infinidad de sensores para poder navegar de mejor forma posible. Algunos son: cámaras de video para visión computacional, radares, sensores LIDAR o ultrasónicos para detectar distancias, velocímetro, GPS para ubicación, acelerómetro y sensores del estado del motor.
+
+### 5. Agente de trading algorítmico en bolsa
+
+- **Performance:** Maximizar el rendimiento financiero (ganancias) del portafolio, y minimizar las pérdidas.
+- **Environment:** Los mercados financieros, plataformas de intercambio (exchanges) y el flujo de noticias económicas. Es parcialmente observable, ya que el agente no puede conocer la información privada de las empresas ni las estrategias secretas de otros inversores. Es estocástico, dado que el movimiento de los precios depende de incontables factores globales aleatorios e impredecibles. Es secuencial porque el acto de comprar un lote de acciones hoy afecta el balance de capital disponible para mañana. Es dinámico ya que los precios en la bolsa cambian en milisegundos mientras el agente procesa su siguiente orden. Se trata como un entorno discreto (cantidades enteras de acciones e incrementos en centavos) y multiagente (compite directamente contra otros algoritmos y traders humanos).
+- **Actuators:** Peticiones de red (APIs) a la plataforma financiera para emitir órdenes de compra, venta o retención de activos.
+- **Sensors:** Flujos de datos de precios en tiempo real, APIs de noticias de mercado, historial de transacciones y estados financieros de la bolsa.
+
+### 6. Sistema de diagnóstico médico asistido por IA
+
+- **Performance:** Lograr identificar al paciente sano o enfermo de manera certera, minimizar los costos médicos por pruebas innecesarias y maximizar la precisión diagnóstica.
+- **Environment:** El paciente, el entorno hospitalario y el personal médico. Es parcialmente observable, ya que no se puede ver el estado biológico completo del interior del paciente sin realizar múltiples pruebas, y aun así hay síntomas ocultos. Es estocástico porque la evolución biológica de una enfermedad o la reacción de un paciente a un tratamiento varían de forma incierta. Es secuencial, puesto que ordenar una prueba diagnóstica cambia la información disponible y afecta el camino del tratamiento futuro. Es dinámico, ya que el cuadro clínico del paciente evoluciona físicamente con el tiempo, y tiene aspectos continuos (como niveles de presión o temperatura corporal).
+- **Actuators:** Interfaz de pantalla que muestra visualmente las preguntas al médico, las órdenes para nuevas pruebas, las clasificaciones de los diagnósticos y las recomendaciones de tratamientos.
+- **Sensors:** Entrada de teclado o voz para recolectar síntomas, carga de bases de datos de historiales clínicos, resultados de laboratorio y escáneres de imágenes médicas (como radiografías o resonancias magnéticas de alta resolución).
+
+### 7. Dron de inspección de infraestructura
+
+- **Performance:** Detectar correctamente las fallas estructurales, mantener el dron en buen estado, minimizar el tiempo de vuelo y optimizar la batería.
+- **Environment:** Exteriores o interiores de infraestructuras complejas (puentes, líneas eléctricas) con presencia de viento y obstáculos físicos. Es parcialmente observable debido a las oclusiones geométricas (no puede ver el otro lado del puente sin volar hacia allá) y condiciones de iluminación. Es estocástico debido a factores como ráfagas de viento imprevistas, interferencias de señal o fallos mecánicos imprevistos. Es secuencial porque cada decisión de navegación en el espacio 3D dicta si logrará cubrir toda el área antes de quedarse sin batería. Dinámico debido a los cambios climáticos o piezas móviles en la industria, y completamente continuo en las coordenadas espaciales, movimiento y variables físicas.
+- **Actuators:** Rotores para ajustar altitud, balance y dirección), estabilizadores de cámara, e indicadores de luz o alarmas.
+- **Sensors:** Cámaras RGB de alta resolución, sensores térmicos o infrarrojos para fugas, GPS para posicionamiento, giroscopios, acelerómetros, altímetro y sensores ultrasónicos/LIDAR para prevenir colisiones contra la estructura.
+
+
+### 8. Agente jugador de ajedrez
+
+- **Performance:** Ganar el juego respetando las reglas de ajedrez.
+- **Environment:** A diferencia de los ejemplos anteriores, este es un entorno totalmente observable, ya que el agente tiene acceso al estado completo y relevante (puede ver la posición de todas las piezas de ambos bandos en todo momento). Es estrictamente determinista, ya que no hay azar; si el agente mueve un peón, este llega exacta y únicamente a la casilla indicada. Es altamente secuencial, ya que hacer una mala apertura o perder una pieza afecta el resto de la partida y todas las posibilidades futuras. Es estático (si no usamos reloj), porque el tablero no cambia en absoluto mientras el agente procesa su siguiente jugada (o semidinámico si el reloj va descontando la puntuación de rendimiento). Es un espacio discreto (movimientos y casillas finitas) y, por naturaleza, multiagente competitivo (ya que la meta del oponente es minimizar el rendimiento del agente).
+- **Actuators:** Interfaz gráfica para mostrar o mover las piezas virtualmente en la pantalla.
+- **Sensors:** Entrada de teclado, clic de ratón o lecturas internas de software (APIs) que le indican exactamente qué movimiento realizó el oponente en el tablero digital.
