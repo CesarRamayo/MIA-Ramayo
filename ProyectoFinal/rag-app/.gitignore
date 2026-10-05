@@ -1,0 +1,15 @@
+# Secretos
+.env
+
+# Entorno virtual
+venv/
+
+# Cache de Python
+__pycache__/
+*.pyc
+
+# Persistencia local y base de datos
+chroma/
+
+# Datos temporales e historial de prueba
+data/chat_history.json
